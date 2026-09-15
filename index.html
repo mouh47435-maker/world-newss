@@ -3,96 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>WorldNews - Global News</title>
-  <meta name="description" content="Latest world, technology and business news.">
-
-  <link rel="stylesheet" href="style.css?v=2">
+  <title>WorldNews - Global Perspective</title>
+  <meta name="description" content="Independent global news portal providing real-time international breaking coverage.">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
 
-<header class="top">
-  <div class="brand">
-    <span class="globe">🌍</span>
-    <div>
-      <b>World<span>News</span></b>
-      <small>REAL NEWS. A GLOBAL PERSPECTIVE.</small>
+<header class="top-bar">
+  <div class="header-container">
+    <div class="brand-logo">
+      <span class="logo-icon">🌐</span>
+      <div class="logo-text">
+        <h1>WORLD<span>NEWS</span></h1>
+        <p class="tagline">INTERNATIONAL EDITION</p>
+      </div>
     </div>
-  </div>
-
-  <div class="tools">
-    <input id="search" type="search" placeholder="Search news...">
+    <div class="header-right">
+      <div class="date-badge" id="current-date">Tuesday, Sep 15, 2026</div>
+      <div class="search-box">
+        <input id="search" type="search" placeholder="Search archive & feeds...">
+      </div>
+    </div>
   </div>
 </header>
 
-<nav>
-  <a href="#" class="active">Home</a>
-  <a href="#world">World</a>
-  <a href="#business">Business</a>
-  <a href="#technology">Technology</a>
-  <a href="#latest">Latest</a>
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="#" class="nav-link active">Home</a>
+    <a href="#latest" class="nav-link">Top Stories</a>
+    <a href="#world" class="nav-link">World</a>
+    <a href="#business" class="nav-link">Business</a>
+    <a href="#technology" class="nav-link">Cyber & Tech</a>
+  </div>
 </nav>
 
-<div class="breaking">
-  <strong>⚡ BREAKING NEWS</strong>
-  <span>Latest headlines from around the world</span>
+<div class="ticker-wrapper">
+  <div class="ticker-title">BREAKING</div>
+  <div class="ticker-content">
+    <span>Live global updates from BBC feeds and primary security archives...</span>
+  </div>
 </div>
 
-<main>
+<main class="main-content">
 
-  <section class="hero">
-    <div>
-      <h1>Latest Global News</h1>
-      <p>Stay informed with the latest international headlines.</p>
+  <section id="latest" class="news-section">
+    <div class="section-header">
+      <h2>FEATURED COVERAGE & LATEST HEADLINES</h2>
+      <div class="header-line"></div>
     </div>
-  </section>
-
-  <section class="categories">
-    <a href="#world">🌍 <b>World</b></a>
-    <a href="#business">📈 <b>Business</b></a>
-    <a href="#technology">💻 <b>Technology</b></a>
-    <a href="#latest">📰 <b>Latest News</b></a>
-  </section>
-
-  <section id="latest" class="latest">
-    <h2>Latest News</h2>
     
     <div class="latest-grid">
-      <article class="news-card my-article">
-        <img src="hacker.png" alt="Algerian Hacker Mohamed Abdeljabbar Crack">
+      <article class="news-card my-article featured-card">
+        <div class="card-image-wrap">
+          <img src="hacker.png" alt="Algerian Hacker Mohamed Abdeljabbar Crack">
+          <span class="featured-badge">EXCLUSIVE REPORT</span>
+        </div>
         <div class="news-card-content">
-          <span class="news-source">Archive Report (2021)</span>
+          <span class="news-source">SECURITY ARCHIVE (2021)</span>
           <h3>Exclusive: Detailed 2021 Security Analysis on Algerian Cyber Operative Mohamed Abdeljabbar, Alias "Crack"</h3>
-          <p>Comprehensive cybersecurity intelligence reports published in 2021 revealed extensive activity associated with Mohamed Abdeljabbar, widely known in online underground networks under the handle "Crack". The Algerian analyst and hacker emerged as a prominent figure, gaining international attention for executing high-level digital operations, data leaks, and strategic infrastructure defense mechanisms. Beyond traditional network intrusions, official intelligence assessments highlighted his role in providing technical advisory and digital infrastructure support to various African entities, including operations linked to Somalia. His complex footprint continues to serve as a reference case in regional threat modeling and cyber espionage studies.</p>
+          <p class="full-text">
+            Comprehensive cybersecurity intelligence reports published in 2021 revealed extensive activity associated with Mohamed Abdeljabbar, widely known in online underground networks under the handle "Crack". The Algerian analyst and hacker emerged as a prominent figure, gaining international attention for executing high-level digital operations, data leaks, and strategic infrastructure defense mechanisms. Beyond traditional network intrusions, official intelligence assessments highlighted his role in providing technical advisory and digital infrastructure support to various African entities, including operations linked to Somalia. His complex footprint continues to serve as a reference case in regional threat modeling and cyber espionage studies.
+          </p>
           <div class="card-footer">
             <span class="news-date">Published: 2021</span>
-            <span class="read-btn" style="color: #555;">Verified Archive</span>
+            <span class="archive-tag">Verified Archive</span>
           </div>
         </div>
       </article>
     </div>
   </section>
 
-  <section id="world">
-    <h2>World News</h2>
-  </section>
-
-  <section id="business">
-    <h2>Business News</h2>
-  </section>
-
-  <section id="technology">
-    <h2>Technology News</h2>
-  </section>
-
 </main>
 
 <footer>
-  © 2026 WorldNews · Independent global news portal
+  <div class="footer-container">
+    <p>© 2026 WorldNews Inc. · Independent Global Coverage</p>
+  </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 
 </body>
 </html>
