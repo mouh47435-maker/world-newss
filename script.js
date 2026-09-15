@@ -8,14 +8,13 @@ async function loadNews() {
     const container = document.querySelector('.latest-grid');
     if (!container || !data.items) return;
 
-    // الاحتفاظ بالمقال المخصص الخاص بك
+    // الحفاظ على المقال الخاص بك كما هو بكل تفاصيله
     const customArticles = container.querySelectorAll('.my-article');
     let customHTML = '';
     customArticles.forEach(art => customHTML += art.outerHTML);
 
-    // إنتاج بطاقات الأخبار التلقائية مع استخراج الصور
-    const fetchedCards = data.items.slice(0, 12).map(item => {
-      // البحث عن صورة داخل الخبر أو استخدام صورة افتراضية أنيقة
+    // معالجة أخبار RSS
+    const fetchedCards = data.items.slice(0, 11).map(item => {
       let imgUrl = item.thumbnail || (item.enclosure && item.enclosure.link);
       if (!imgUrl) {
         const imgMatch = item.description.match(/<img[^>]+src="([^">]+)"/);
@@ -26,14 +25,16 @@ async function loadNews() {
 
       return `
         <article class="news-card">
-          <img src="${imgUrl}" alt="News Image" class="news-img">
+          <div class="card-image-wrap">
+            <img src="${imgUrl}" alt="News Image">
+          </div>
           <div class="news-card-content">
-            <span class="news-source">BBC News</span>
+            <span class="news-source">BBC NEWS</span>
             <h3>${item.title}</h3>
             <p>${cleanText.substring(0, 110)}...</p>
             <div class="card-footer">
               <span class="news-date">${new Date(item.pubDate).toLocaleDateString()}</span>
-              <a href="${item.link}" target="_blank" class="read-btn">Read story →</a>
+              <a href="${item.link}" target="_blank" style="color:#bb1919; font-weight:bold; font-size:0.8rem; text-decoration:none;">Read story →</a>
             </div>
           </div>
         </article>
