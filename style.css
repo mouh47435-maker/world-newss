@@ -184,6 +184,20 @@ body {
   display: block;
 }
 
+/* تنسيق خاص بمقالك لعرض الصورة كاملة دون قص */
+.my-article img {
+  height: 320px;
+  object-fit: contain;
+  background-color: #0d1117;
+}
+
+/* تمييز بطاقة مقالك لتظهر بعرض كامل على الشاشات المتوسطة والكبيرة */
+@media (min-width: 768px) {
+  .my-article {
+    grid-column: span 2;
+  }
+}
+
 .featured-badge {
   position: absolute;
   top: 12px;
@@ -213,22 +227,20 @@ body {
 }
 
 .news-card h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   line-height: 1.4;
   margin-bottom: 12px;
   color: #0f1419;
 }
 
-/* مقالك الخاص يعرض النصام كاملاً بدون اقتصاص */
 .my-article .full-text {
-  font-size: 0.9rem;
-  color: #333;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #24292e;
+  line-height: 1.75;
   margin-bottom: 15px;
 }
 
-/* الأخبار التلقائية */
 .news-card p:not(.full-text) {
   font-size: 0.88rem;
   color: #555;
